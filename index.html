@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pilar Gonzales Sanchez | Public Health Portfolio</title>
+
+<style>
+:root{
+    --bg:#faf8ff;
+    --card:#ffffff;
+    --primary:#cdb4db;
+    --secondary:#d8f3dc;
+    --accent:#ffd6e0;
+    --text:#333333;
+    --shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+header{
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+    padding:70px 0;
+}
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.hero-content{
+    flex:1;
+    min-width:280px;
+}
+
+.hero-content h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.hero-content p{
+    font-size:1.1rem;
+    margin-bottom:12px;
+}
+
+.resume-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 22px;
+    background:white;
+    color:#444;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    box-shadow:var(--shadow);
+}
+
+.resume-btn:hover{
+    opacity:0.9;
+}
+
+.photo-section{
+    flex-shrink:0;
+}
+
+.avatar{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:3rem;
+    font-weight:bold;
+    color:#666;
+    box-shadow:var(--shadow);
+}
+
+section{
+    padding:60px 0;
+}
+
+h2{
+    margin-bottom:25px;
+    font-size:2rem;
+}
+
+.card{
+    background:var(--card);
+    padding:25px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+}
+
+.skills-grid,
+.projects-grid,
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.skill-card,
+.project-card,
+.portfolio-card{
+    background:var(--card);
+    padding:22px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+}
+
+.skill-card{
+    background:var(--secondary);
+    text-align:center;
+    font-weight:bold;
+}
+
+.project-card h3,
+.portfolio-card h3{
+    margin-bottom:10px;
+}
+
+.contact-card{
+    background:var(--card);
+    padding:25px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+}
+
+a{
+    color:#4c5fd5;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#777;
+}
+
+@media (max-width:768px){
+    .hero{
+        text-align:center;
+        justify-content:center;
+    }
+
+    .hero-content h1{
+        font-size:2.2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container hero">
+
+        <div class="hero-content">
+            <h1>Pilar Gonzales Sanchez</h1>
+            <p>I'm focused on community wellness.</p>
+            <p><strong>Public Health • Class of 2027</strong></p>
+
+            resume.pdf
+                Download Resume
+            </a>
+        </div>
+
+        <div class="photo-section">
+            <!-- CHANGE THE NEXT LINE TO: <img src="photo.jpg" alt="Pilar Gonzales Sanchez" class="avatar" style="object-fit:cover;"> -->
+            <div class="avatar">PG</div>
+        </div>
+
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>About Me</h2>
+
+        <div class="card">
+            <p>
+                I am a Public Health student who chose this field to help improve community health.
+                I care deeply about mental health and the importance of supporting individuals and
+                communities through education, awareness, and access to resources.
+            </p>
+
+            <br>
+
+            <p>
+                My goal is to become a Community Health Worker and contribute to healthier communities
+                by promoting wellness, supporting public health initiatives, and helping people access
+                the resources they need.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill-card">Communication</div>
+            <div class="skill-card">Teamwork</div>
+            <div class="skill-card">Problem-Solving</div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Projects</h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <h3>Mental Health Awareness Project</h3>
+                <p>
+                    A sample project focused on increasing awareness of mental health issues,
+                    sharing educational resources, and encouraging healthy conversations about
+                    mental well-being within communities.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Community Wellness Initiative</h3>
+                <p>
+                    A sample project focused on promoting wellness through community outreach,
+                    health education, and engagement activities that support healthier lifestyles.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>PH 320 Portfolio — Applied Biostatistics in Public Health, York College CUNY</h2>
+
+        <div class="portfolio-grid">
+
+            <!-- ADD YOUR WEEK 3 LINK ABOVE THIS CARD -->
+            <div class="portfolio-card">
+                <h3>Week 3</h3>
+                <p>Coming soon.</p>
+            </div>
+
+            <!-- ADD YOUR WEEK 4 LINK ABOVE THIS CARD -->
+            <div class="portfolio-card">
+                <h3>Week 4</h3>
+                <p>Coming soon.</p>
+            </div>
+
+            <!-- ADD YOUR WEEK 5 LINK ABOVE THIS CARD -->
+            <div class="portfolio-card">
+                <h3>Week 5</h3>
+                <p>Coming soon.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Contact</h2>
+
+        <div class="contact-card">
+            <p>
+                <strong>Email:</strong>
+                <a href="mailto:pilargonzaless1012@gmail.com">
+                    pilargonzaless1012@gmail.com
+                </a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Pilar Gonzales Sanchez</p>
+</footer>
+
+</body>
+</html>
