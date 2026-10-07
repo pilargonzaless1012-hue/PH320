@@ -35,6 +35,86 @@ body{
     margin:auto;
 }
 
+/* Navigation Bar Styles */
+nav{
+    position:sticky;
+    top:0;
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+    box-shadow:var(--shadow);
+    z-index:100;
+}
+
+.nav-container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:bold;
+    color:#333;
+    text-decoration:none;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:opacity 0.3s ease;
+}
+
+.nav-links a:hover{
+    opacity:0.7;
+}
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    font-size:1.5rem;
+    cursor:pointer;
+    color:#333;
+}
+
+@media (max-width:768px){
+    .nav-links{
+        position:absolute;
+        top:60px;
+        left:0;
+        right:0;
+        background:linear-gradient(135deg,var(--primary),var(--accent));
+        flex-direction:column;
+        gap:0;
+        max-height:0;
+        overflow:hidden;
+        transition:max-height 0.3s ease;
+    }
+
+    .nav-links.active{
+        max-height:300px;
+    }
+
+    .nav-links li{
+        padding:15px 20px;
+        border-bottom:1px solid rgba(255,255,255,0.2);
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+}
+
 header{
     background:linear-gradient(135deg,var(--primary),var(--accent));
     padding:70px 0;
@@ -173,6 +253,21 @@ footer{
 
 <body>
 
+<!-- Navigation Bar -->
+<nav>
+    <div class="nav-container">
+        <a href="#" class="logo">PG</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+</nav>
+
 <header>
     <div class="container hero">
 
@@ -181,7 +276,7 @@ footer{
             <p>I'm focused on community wellness.</p>
             <p><strong>Public Health • Class of 2027</strong></p>
 
-            resume.pdf
+            <a href="resume.pdf" class="resume-btn">
                 Download Resume
             </a>
         </div>
@@ -194,7 +289,7 @@ footer{
     </div>
 </header>
 
-<section>
+<section id="about">
     <div class="container">
         <h2>About Me</h2>
 
@@ -216,7 +311,7 @@ footer{
     </div>
 </section>
 
-<section>
+<section id="skills">
     <div class="container">
         <h2>Skills</h2>
 
@@ -228,7 +323,7 @@ footer{
     </div>
 </section>
 
-<section>
+<section id="projects">
     <div class="container">
         <h2>Projects</h2>
 
@@ -255,7 +350,7 @@ footer{
     </div>
 </section>
 
-<section>
+<section id="portfolio">
     <div class="container">
         <h2>PH 320 Portfolio — Applied Biostatistics in Public Health, York College CUNY</h2>
 
@@ -283,7 +378,7 @@ footer{
     </div>
 </section>
 
-<section>
+<section id="contact">
     <div class="container">
         <h2>Contact</h2>
 
@@ -301,6 +396,20 @@ footer{
 <footer>
     <p>&copy; 2026 Pilar Gonzales Sanchez</p>
 </footer>
+
+<script>
+function toggleMenu(){
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+
+// Close menu when clicking on a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('active');
+    });
+});
+</script>
 
 </body>
 </html>
