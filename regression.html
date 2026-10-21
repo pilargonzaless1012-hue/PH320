@@ -1,318 +1,93 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Regression Analysis | PH 320</title>
-
+  <title>MY TITLE HERE</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f7;
+      color: #222;
       line-height: 1.7;
-      color: #253247;
-      background: #f4f7fb;
     }
 
-    header {
-      background: #163a5f;
-      color: white;
-      padding: 35px 20px;
-      text-align: center;
+    .page {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 32px 20px 24px;
     }
 
-    header h1 {
-      margin: 0 0 10px;
+    h1 {
       font-size: 2rem;
-    }
-
-    header p {
-      margin: 0;
-      color: #e0eaf5;
-    }
-
-    nav {
-      background: #102b47;
-      padding: 14px 20px;
+      margin: 0 0 20px;
       text-align: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 0 12px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      max-width: 950px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
-    section {
-      background: white;
-      margin-bottom: 22px;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 3px 12px rgba(20, 40, 70, 0.08);
+      line-height: 1.3;
     }
 
     h2 {
-      color: #163a5f;
-      margin-top: 0;
-      border-bottom: 2px solid #e1eaf3;
-      padding-bottom: 10px;
+      font-size: 1.25rem;
+      margin: 24px 0 12px;
     }
 
-    .highlight {
-      background: #eef5fc;
-      border-left: 5px solid #3976ad;
-      padding: 15px;
-      border-radius: 4px;
+    p {
+      margin: 0 0 16px;
+      font-size: 1rem;
     }
 
-    .results-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 20px auto 24px;
+      border: 1px solid #ddd;
+      background: #fff;
+      padding: 8px;
+      border-radius: 6px;
     }
 
-    .results-table th,
-    .results-table td {
-      border: 1px solid #d5deea;
-      padding: 12px;
-      text-align: left;
+    .home-link {
+      display: inline-block;
+      margin-top: 16px;
+      margin-bottom: 20px;
     }
 
-    .results-table th {
-      background: #eaf1f8;
+    a {
+      color: #1d4d8f;
+      text-decoration: none;
     }
 
-    .note {
-      color: #5b6778;
-      font-size: 0.92rem;
+    a:hover {
+      text-decoration: underline;
     }
 
-    footer {
-      background: #163a5f;
-      color: white;
+    .footer {
+      margin-top: 28px;
+      padding-top: 12px;
+      border-top: 1px solid #ddd;
       text-align: center;
-      padding: 22px;
-      margin-top: 35px;
-    }
-
-    footer p {
-      margin: 4px 0;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.6rem;
-      }
-
-      section {
-        padding: 18px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 5px 8px;
-      }
+      font-size: 0.75rem;
+      color: #555;
     }
   </style>
 </head>
-
 <body>
+  <main class="page">
+    <h1>MY TITLE HERE</h1>
 
-  <header>
-    <h1>Regression Analysis</h1>
-    <p>PH 320 · Applied Biostatistics in Public Health</p>
-  </header>
+    <img src="table.png" alt="Regression output table">
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="regression.html">Regression Analysis</a>
-  </nav>
+    <p>MY THREE SENTENCES: [paste your correlation, slope and p-value sentences here]</p>
 
-  <main>
+    <h2>What it means for people</h2>
+    <p>WHAT IT MEANS FOR PEOPLE: [paste your 2-3 plain-language sentences here]</p>
 
-    <section>
-      <h2>Research Topic</h2>
+    <div class="home-link">
+      <a href="index.html">Home</a>
+    </div>
 
-      <p>
-        <strong>
-          No Health Insurance and Mental Distress in NYC ZIP Codes
-        </strong>
-      </p>
-
-      <p>
-        This project examines the relationship between the percentage
-        of people without health insurance and a measure of mental
-        distress across New York City ZIP codes.
-      </p>
-
-      <p class="note">
-        Edit the research topic and description if your actual project
-        uses different variables or a different population.
-      </p>
-    </section>
-
-    <section>
-      <h2>Purpose of the Analysis</h2>
-
-      <p>
-        Linear regression is used to examine whether changes in one
-        variable are associated with changes in another variable.
-        In this project, the analysis evaluates the relationship
-        between lack of health insurance and mental distress.
-      </p>
-
-      <p>
-        The regression results help describe the direction and
-        strength of the association. An association does not
-        necessarily mean that one variable causes the other.
-      </p>
-    </section>
-
-    <section>
-      <h2>Regression Results</h2>
-
-      <p>
-        The following table summarizes the main statistics from
-        the regression analysis. Replace the sample entries with
-        the actual results from your statistical output.
-      </p>
-
-      <table class="results-table">
-        <thead>
-          <tr>
-            <th>Statistic</th>
-            <th>Result</th>
-            <th>Interpretation</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>Correlation (r)</td>
-            <td>[Enter your r value]</td>
-            <td>
-              Describes the direction and strength of the linear
-              relationship.
-            </td>
-          </tr>
-
-          <tr>
-            <td>Slope</td>
-            <td>[Enter your slope]</td>
-            <td>
-              Estimates the change in the outcome for a one-unit
-              increase in the predictor.
-            </td>
-          </tr>
-
-          <tr>
-            <td>P-value</td>
-            <td>[Enter your p-value]</td>
-            <td>
-              Helps assess the statistical evidence against the
-              null hypothesis.
-            </td>
-          </tr>
-
-          <tr>
-            <td>R-squared (R²)</td>
-            <td>[Enter your R-squared, if available]</td>
-            <td>
-              Describes the proportion of variation in the outcome
-              explained by the fitted linear model.
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p class="note">
-        Important: Do not leave the bracketed placeholders in your
-        final published assignment. Use the actual values from
-        your regression output.
-      </p>
-    </section>
-
-    <section>
-      <h2>Correlation, Slope, and P-value</h2>
-
-      <div class="highlight">
-        <p>
-          <strong>Correlation:</strong>
-          [Explain whether the relationship is positive or negative
-          and how strong it is based on your correlation value.]
-        </p>
-
-        <p>
-          <strong>Slope:</strong>
-          [Explain how much the outcome is expected to change for
-          each one-unit increase in the predictor, including units.]
-        </p>
-
-        <p>
-          <strong>P-value:</strong>
-          [Report your p-value and explain whether the result is
-          statistically significant using your chosen significance
-          level, commonly 0.05.]
-        </p>
-      </div>
-    </section>
-
-    <section>
-      <h2>What This Means for People</h2>
-
-      <p>
-        [Explain the real-world meaning of your findings in two
-        or three sentences. Describe what the relationship might
-        suggest for public health and the communities being studied.]
-      </p>
-
-      <p>
-        These findings describe an association between variables.
-        They do not, by themselves, prove that lack of health
-        insurance causes mental distress. Other social, economic,
-        and health-related factors may also influence the results.
-      </p>
-    </section>
-
-    <section>
-      <h2>Conclusion</h2>
-
-      <p>
-        This regression analysis provides a way to examine patterns
-        between health insurance coverage and mental distress.
-        The results can help identify relationships worth further
-        investigation and support discussion of public health needs.
-      </p>
-
-      <p>
-        The final conclusion should reflect the actual direction,
-        magnitude, and statistical significance of the results.
-      </p>
-    </section>
-
+    <p class="footer"><small>Pilar Gonzales Sanchez<br>PH 320 · Applied Biostatistics in Public Health</small></p>
   </main>
-
-  <footer>
-    <p>Pilar Gonzales-Sanchez</p>
-    <p>PH 320 · Applied Biostatistics in Public Health</p>
-  </footer>
-
 </body>
 </html>

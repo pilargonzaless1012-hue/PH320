@@ -35,7 +35,6 @@ body{
     margin:auto;
 }
 
-/* Navigation Bar Styles */
 nav{
     position:sticky;
     top:0;
@@ -253,7 +252,6 @@ footer{
 
 <body>
 
-<!-- Navigation Bar -->
 <nav>
     <div class="nav-container">
         <a href="#" class="logo">PG</a>
@@ -282,7 +280,6 @@ footer{
         </div>
 
         <div class="photo-section">
-            <!-- CHANGE THE NEXT LINE TO: <img src="photo.jpg" alt="Pilar Gonzales Sanchez" class="avatar" style="object-fit:cover;"> -->
             <div class="avatar">PG</div>
         </div>
 
@@ -356,19 +353,21 @@ footer{
 
         <div class="portfolio-grid">
 
-            <!-- ADD YOUR WEEK 3 LINK ABOVE THIS CARD -->
+            <div class="portfolio-card">
+                <h3><a href="regression.html">Regression Analysis</a></h3>
+                <p>View the regression project page.</p>
+            </div>
+
             <div class="portfolio-card">
                 <h3>Week 3</h3>
                 <p>Coming soon.</p>
             </div>
 
-            <!-- ADD YOUR WEEK 4 LINK ABOVE THIS CARD -->
             <div class="portfolio-card">
                 <h3>Week 4</h3>
                 <p>Coming soon.</p>
             </div>
 
-            <!-- ADD YOUR WEEK 5 LINK ABOVE THIS CARD -->
             <div class="portfolio-card">
                 <h3>Week 5</h3>
                 <p>Coming soon.</p>
@@ -403,7 +402,6 @@ function toggleMenu(){
     navLinks.classList.toggle('active');
 }
 
-// Close menu when clicking on a link
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         document.querySelector('.nav-links').classList.remove('active');
